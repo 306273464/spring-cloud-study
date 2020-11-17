@@ -19,6 +19,8 @@
         <module>eureka-server</module>
         <module>user</module>
         <module>order</module>
+        <module>user-ribbon</module>
+        <module>apigateway-zuul</module>
     </modules>
 
     <properties>
@@ -27,6 +29,11 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

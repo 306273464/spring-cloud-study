@@ -1,0 +1,28 @@
+server:
+  port: 7806
+
+spring:
+  application:
+    name: apigateway-zuul
+  security:
+    user:
+      name: ljj
+      password: lijunjie
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ljj:lijunjie@localhost:7800/eureka/
+  instance:
+    prefer-ip-address: true  #在eureka中启用服务器显示ip
+    ip-address: 127.0.0.1
+
+zuul:
+  host:
+    connect-timeout-millis: 60000
+    socket-timeout-millis: 60000
+  routes:
+    order:
+      path: /order/**
+      sensitiveHeaders:
+      serviceId: order

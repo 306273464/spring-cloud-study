@@ -1,9 +1,9 @@
 server:
-  port: 7902
+  port: 7901
 
 spring:
   application:
-    name: order
+    name: user-ribbon
 eureka:
   client:
     service-url:
@@ -11,4 +11,3 @@ eureka:
   instance:
     prefer-ip-address: true  #在eureka中启用服务器显示ip
     ip-address: 127.0.0.1
-

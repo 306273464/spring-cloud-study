@@ -1,14 +1,19 @@
 server:
-  port: 7900
+  port: 7800
 
 spring:
   application:
     name: eureka-server
+  security:
+    user:
+      name: ljj
+      password: lijunjie
+
 eureka:
   instance:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port:7900}/eureka/
+      defaultZone: http://ljj:lijunjie@${eureka.instance.hostname}:${server.port:7800}/eureka/
     register-with-eureka: false
     fetch-registry: false
